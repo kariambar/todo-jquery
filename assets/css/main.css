@@ -1,0 +1,51 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-image: url('../img/fondo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	color: black;
+}
+
+.header{
+	background-color: #4A148C;
+}
+
+.title{
+	color: white;
+	margin-left: 4rem;
+}
+
+.container{
+	padding: 10% 0;
+	background-color: rgba(187, 212, 208, 0.8);
+	margin-top: 5rem;
+}
+
+#nombre{
+	align-items: center;
+	color: black;
+	margin-left: 50%;
+}
+input, label, span, p{
+	color: black;
+}
+
+.check{
+	display: inline-block;
+}
+
+form{
+	margin-left: 10rem;
+}
+
+.btn{
+	height: 25px;
+	font-size: 12px;
+	margin-left: 40rem;
+	
+}
