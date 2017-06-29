@@ -29,28 +29,28 @@ body{
 }
 
 .add-text{
- width: 200px;
+ 	width: 200px;
 	align-items: center;
 	color: black;
 	background-color: transparent;
-  display: flex;
+  	display: flex;
 }
 
 .list-body{
-  display: flex;
+  	display: flex;
 }
 
 .btn{
-  margin-left: 200px;
-  margin-top: 0.3rem;
+	margin-left: 200px;
+	margin-top: 0.3rem;
 }
 
 label.checkbox{
-  color: black;
+  	color: black;
 }
 
 .listitem{
-  padding-top: 4rem;
+ 	 padding-top: 4rem;
 }
 
 ::-webkit-input-placeholder { color: #4A148C; } /* WebKit */

@@ -2,21 +2,22 @@
 //funcion para añadir item con enter
 $(document).ready(function(){
     $(".add").click(function(){
-     $.fn.additem();
+     $.fn.additem(); //fn combina el contenido de un objeto
   });
-  $(".add-text").keypress(function( event ) {
-     if ( event.which == 13 ) {
+  $(".add-text").keypress(function( event ) { //detectar la presión de las teclas del teclado
+     if ( event.which == 13 ) { //event.which propiedad que indica la tecla o botón específico que se pulsó.
        $.fn.additem();
      }
   });
-  $("ul").on('click', '.checkbox', function () {
-    $(this).parents("li").toggleClass("completed");
-       if ( $(this).parents("li").hasClass("completed") ) {
-         $(this).parents("li").appendTo("ul");
-       } else {
-         $(this).parents("li").prependTo("ul");
+  //checkbox: Selecciona todos los elementos del tipo formulario.
+  $("ul").on('click', '.checkbox', function () { //controlador de eventos para uno o más eventos a los elementos seleccionados.
+    $(this).parents("li").toggleClass("completed"); //toggleClassAñade o quita una o más clases de cada elemento del conjunto de elementos
+       if ( $(this).parents("li").hasClass("completed") ) { //hasClass Determina si alguno de los elementos coincidentes tiene asignada la clase dada
+         $(this).parents("li").appendTo("ul"); //appendTo Inserta contenido al final del elemento de destino
+         $(this).parents("li").prependTo("ul"); //prepend inserta contenido al principio de un elemento especificado
        }
   });
+ //añadir lista a items completa 
   var listnum = 1;
   $( "#sortable" ).sortable();
   $( "#sortable" ).disableSelection();
