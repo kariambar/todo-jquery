@@ -1,22 +1,7 @@
-
-
+//CODIGO JQUERY
+//funcion para añadir item con enter
 $(document).ready(function(){
-  var listnum = 1;
-  $( "#sortable" ).sortable();
-  $( "#sortable" ).disableSelection();
-  $("ul").on('click', '.close', function () {
-      $(this).parent().fadeOut();
-  });
-  $.fn.additem = function(){
-    var addtext=$.trim($(".add-text").val());
-    var listitem = $("<li><input type='checkbox' id='checkbox" + listnum + "' value='None' name='check'><label class='checkbox' for='checkbox" + listnum + "''><p>" + addtext + "</p>" + "</label><a class='close waves-effect waves-light btn item-delete' id='eliminar'>remove</a>"+"</li>");
-    if(addtext.length>0) {
-      $("ul").prepend(listitem);
-      document.getElementById("add-text").value = "";
-      listnum++;
-    }
-  }
-  $(".add").click(function(){
+    $(".add").click(function(){
      $.fn.additem();
   });
   $(".add-text").keypress(function( event ) {
@@ -32,4 +17,20 @@ $(document).ready(function(){
          $(this).parents("li").prependTo("ul");
        }
   });
+  var listnum = 1;
+  $( "#sortable" ).sortable();
+  $( "#sortable" ).disableSelection();
+  $("ul").on('click', '.close', function () {
+      $(this).parent().fadeOut();
+  });
+  $.fn.additem = function(){
+    var addtext=$.trim($(".add-text").val());
+    var listitem = $("<li><input type='checkbox' id='checkbox" + listnum + "' value='None' name='check'><label class='checkbox' for='checkbox" + listnum + "''><p>" + addtext + "</p>" + "</label><a class='close waves-effect waves-light btn item-delete' id='eliminar'>remove</a>"+"</li>");
+    if(addtext.length>0) {
+      $("ul").prepend(listitem);
+      document.getElementById("add-text").value = "";
+      listnum++;
+    }
+  }
+
 });
