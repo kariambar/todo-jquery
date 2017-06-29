@@ -1,3 +1,5 @@
+
+
 *{
 	padding: 0;
 	margin: 0;
@@ -15,9 +17,13 @@ body{
 	background-color: #4A148C;
 }
 
-.title{
+.list{
 	color: white;
 	margin-left: 4rem;
+}
+
+.brand-logo{
+	margin-left: 6rem;
 }
 
 .container{
@@ -26,26 +32,136 @@ body{
 	margin-top: 5rem;
 }
 
-#nombre{
+.list{
+	height: 50px;
 	align-items: center;
 	color: black;
-	margin-left: 50%;
+	background-color: transparent;
+  display: inline-block;
 }
-input, label, span, p{
-	color: black;
+list-title {
+        background: $title;
+        color: $white;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 24px;
+      }
+      .list-add {
+        width: 100%;
+        background: $dark-blue;
+        display: flex;
+        input {
+          background: $dark-blue;
+          color: $light-grey;
+          font-size: 12px;
+          padding: 12px 18px;
+          border: none;
+          width: 100%;
+          outline: none;
+        }
+        button {
+          background: $button;
+          color: $white;
+          font-size: 12px;
+          padding: 8px 18px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            background: $button-hover;
+          }
+        }
+      }
+      .list-body {
+        background: $white;
+        ul {
+          margin: 0;
+          padding: 0;
+          background: $white;
+          li {
+            list-style: none;
+            padding: 16px 18px;
+            display: flex;
+            position: relative;
+            background: $white;
+            &:hover {
+              background: $item-hover;
+            }
+            p {
+              text-align: left;
+              color: $dark-blue;
+              font-size: 18px;
+              margin: 0;
+              width: 100%;
+              padding-left: 5px;
+              &:hover {
+                cursor: default;
+              }
+            }
+            span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+  }
 }
 
-.check{
-	display: inline-block;
+.completed p{
+  text-decoration: line-through;
 }
 
-form{
-	margin-left: 10rem;
+.close {
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  color: $light-grey;
+  font-size: 18px;
+  padding: 4px;
+  transition: all 0.3s;
+  &:hover {
+    color: $dark-blue;
+    display: flex;
+  }
 }
 
-.btn{
-	height: 25px;
-	font-size: 12px;
-	margin-left: 40rem;
-	
+#clear {
+  background: #f97360;
+  color: $white;
+  font-size: 18px;
+  padding: 12px 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1em;
+  &:hover {
+    background: #ff8775;
+  }
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 3px solid $light-grey;
+    border-radius: 4px;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    transition: all 0.3s;
+    &:hover {
+      border: 3px solid $dark-blue;
+    }
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+  width: 20px;
+  height: 20px;
+    &:checked + .checkbox{
+      border: 3px solid $dark-blue;
+      background: $dark-blue;
+    }
 }
