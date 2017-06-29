@@ -11,6 +11,7 @@ body{
 	background-size: cover;
 	background-position: top center;
 	color: black;
+	background-attachment: fixed;
 }
 
 .header{
