@@ -39,3 +39,16 @@ body{
 .list-body{
   display: flex;
 }
+
+.btn{
+  margin-left: 200px;
+  margin-top: 0.3rem;
+}
+
+label.checkbox{
+  color: black;
+}
+
+.listitem{
+  padding-top: 4rem;
+}
