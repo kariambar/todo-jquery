@@ -33,11 +33,11 @@ body{
 }
 
 .list{
-	height: 50px;
+
 	align-items: center;
 	color: black;
 	background-color: transparent;
-  display: inline-block;
+  display: flex;
 }
 
 .close {
