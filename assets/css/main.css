@@ -18,11 +18,11 @@ body{
 }
 
 .brand-logo{
-	margin-left: 6rem;
+	margin-left: 14rem;
 }
 
 .container{
-	padding: 10% 20%;
+	padding: 5% 20%;
 	background-color: rgba(187, 212, 208, 0.8);
 	margin-top: 5rem;
 
@@ -52,3 +52,5 @@ label.checkbox{
 .listitem{
   padding-top: 4rem;
 }
+
+::-webkit-input-placeholder { color: #4A148C; } /* WebKit */
