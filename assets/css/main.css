@@ -17,11 +17,6 @@ body{
 	background-color: #4A148C;
 }
 
-.list{
-	color: white;
-	margin-left: 4rem;
-}
-
 .brand-logo{
 	margin-left: 6rem;
 }
@@ -30,66 +25,17 @@ body{
 	padding: 10% 20%;
 	background-color: rgba(187, 212, 208, 0.8);
 	margin-top: 5rem;
+
 }
 
-.list{
-
+.add-text{
+ width: 200px;
 	align-items: center;
 	color: black;
 	background-color: transparent;
   display: flex;
 }
 
-.close {
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  color: $light-grey;
-  font-size: 18px;
-  padding: 4px;
-  transition: all 0.3s;
-  &:hover {
-    color: $dark-blue;
-    display: flex;
-  }
-}
-
-#clear {
-  background: #f97360;
-  color: $white;
-  font-size: 18px;
-  padding: 12px 18px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.3s;
-  margin-top: 1em;
-  &:hover {
-    background: #ff8775;
-  }
-}
-
-.checkbox {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    border: 3px solid $light-grey;
-    border-radius: 4px;
-    position: absolute;
-    top: 14px;
-    left: 20px;
-    transition: all 0.3s;
-    &:hover {
-      border: 3px solid $dark-blue;
-    }
-}
-
-input[type=checkbox] {
-  visibility: hidden;
-  width: 20px;
-  height: 20px;
-    &:checked + .checkbox{
-      border: 3px solid $dark-blue;
-      background: $dark-blue;
-    }
+.list-body{
+  display: flex;
 }

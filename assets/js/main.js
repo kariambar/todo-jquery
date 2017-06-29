@@ -9,7 +9,7 @@ $(document).ready(function(){
   });
   $.fn.additem = function(){
     var addtext=$.trim($(".add-text").val());
-    var listitem = $("<li><div><input type='checkbox' id='checkbox" + listnum + "' value='None' name='check'><label class='checkbox' for='checkbox" + listnum + "''></div><p>" + addtext + "</p><a class='close'>X</a></li>");
+    var listitem = $("<li><input type='checkbox' id='checkbox" + listnum + "' value='None' name='check'><label class='checkbox' for='checkbox" + listnum + "''><p>" + addtext + "</p>" + "</label><a class='close waves-effect waves-light btn item-delete' id='eliminar'>remove</a>"+"</li>");
     if(addtext.length>0) {
       $("ul").prepend(listitem);
       document.getElementById("add-text").value = "";
