@@ -19,18 +19,19 @@ $(document).ready(function(){
   });
  //añadir lista a items completa 
   var listnum = 1;
-  $( "#sortable" ).sortable();
-  $( "#sortable" ).disableSelection();
+  $( "#sortable" ).sortable(); //sortable Reordenar elementos en una lista
+  $( "#sortable" ).disableSelection(); //Deshabilita la selección de contenido de texto dentro del conjunto de elementos coincidentes
   $("ul").on('click', '.close', function () {
-      $(this).parent().fadeOut();
+      $(this).parent().fadeOut();//Oculta los elementos coincidentes desvaneciéndolos a transparente.
   });
   $.fn.additem = function(){
-    var addtext=$.trim($(".add-text").val());
+    var addtext=$.trim($(".add-text").val());//trim Elimina el espacio en blanco desde el principio y el final de una cadena.
+    //añado mis tareas a la lista
     var listitem = $("<li><input type='checkbox' id='checkbox" + listnum + "' value='None' name='check'><label class='checkbox' for='checkbox" + listnum + "''><p>" + addtext + "</p>" + "</label><a class='close waves-effect waves-light btn item-delete' id='eliminar'>remove</a>"+"</li>");
     if(addtext.length>0) {
       $("ul").prepend(listitem);
       document.getElementById("add-text").value = "";
-      listnum++;
+      listnum++; 
     }
   }
 
